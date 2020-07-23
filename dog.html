@@ -16,7 +16,7 @@
         const div = document.querySelector('#container');
 
         btn.addEventListener('click', async () => {
-            const response = await fetch('http://localhost:3000/weather');
+            const response = await fetch('/weather');
             const res = await response.json();
             console.log(res);
             div.innerText = res.weather.weather_state_name + res.user.name
