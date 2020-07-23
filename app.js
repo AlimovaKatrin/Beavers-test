@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
 app.get('/weather', async (req, res) => {
     // const response = await nodeFetch('https://www.metaweather.com/api/location/44418/2013/4/27/');
     // const result = await response.json();
-    // const user = await User.findOne({});
-    res.json('{ weather: result[0], user }')
+    const user = await User.findOne({});
+    res.json({ user })
 });
 
 app.listen(process.env.PORT || 4200, () => console.log('listen'))
